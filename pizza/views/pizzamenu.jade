@@ -1,0 +1,54 @@
+mixin pizzaThumbnail(ingredient, ingredientType, thumb, altText, price, column)
+	div(class="col-xs-5 col-sm-#{column} col-sm-#{column} col-sm-#{column} ingredient")
+		a(href="#", class="#{ingredientType}", rev="#{altText},#{price}")
+			img(src="images/#{thumb}", data-type="#{ingredientType}", alt="#{altText}").img-responsive
+			.detail
+				= ingredient
+
+#menu.row
+	.container#builder-container
+		legend Build Your Pizza
+			button(type="button", id="showCart").btn.btn-primary.pull-right Show Cart
+		div.bg-info Choose the size, type of crust and all the toppings you want!
+		.builder.row
+			.col-xs-12.col-sm-4.col-md-4.col-lg-4
+				h2 Size
+			.col-xs-12.col-sm-8.col-md-8.col-lg-8
+				.row.pizzafeature
+					each val, index in data.size
+						+pizzaThumbnail(val.caption , "size", val.thumb, val.altText, val.price, 3)
+		.builder.row
+			.col-xs-12.col-sm-4.col-md-4.col-lg-4
+				h2 Crust
+					h6.pull-right (w/ mozzarela cheese)
+
+			.col-xs-12.col-sm-8.col-md-8.col-lg-8
+				.row.pizzafeature
+					each val, index in data.crust
+						+pizzaThumbnail(val.caption , "crust", val.thumb, val.altText,val.price,3)
+
+		.builder.row
+			.col-xs-12.col-sm-4.col-md-4.col-lg-4
+				h2#select-all-toppings Toppings
+					h6.pull-right (click header above to select all)
+			.col-xs-12.col-sm-8.col-md-8.col-lg-8
+				.row.pizzafeature
+					each val, index in data.toppings
+						+pizzaThumbnail(val.caption , "topping", val.thumb, val.altText, val.price, 3)
+		.builder.row
+			.col-xs-12.col-sm-4.col-md-4.col-lg-4
+				h2 Quantity
+			.col-xs-12.col-sm-8.col-md-8.col-lg-8
+				.row.pizzafeature
+					.col-xs-12.col-sm-9.col-md-9.col-lg-9.ingredient
+						input.form-control(type='text', name="qty", id="qty", value="1",width="100" placeholder='number of pizzas')
+		.builder.row
+			.col-xs-12.col-sm-12.col-md-12.col-lg-12
+				button(type="button", id="addToCart").btn.btn-primary.pull-right Add To Cart
+	.container#cart-container
+		legend Cart
+			button(type="button", id="addAnother").btn.btn-primary.pull-right Build Another Pizza
+		div.bg-info Review your order before submitting
+		div.container-full.table-responsive
+			table.cart.table
+

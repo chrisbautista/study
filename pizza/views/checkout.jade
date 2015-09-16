@@ -1,0 +1,82 @@
+extends layout
+
+block content
+	.main
+		#checkout.container
+			legend Checkout
+			.table-responsive
+				table.container-fluid.table
+					thead
+						tr
+							each val, index in headers
+								th= val
+					tbody
+						each val, index in cart.cart
+							tr
+								each val2, index2 in val
+									td= val2
+
+						tr
+
+							td(colspan="3") 
+							td 
+								strong W/out Tax
+							td $
+								span= cart.notax
+						tr
+
+							td(colspan="3") 
+							td 
+								strong Tax(%)
+							td 
+								span= cart.tax
+						tr
+
+							td(colspan="3") 
+							td 
+								strong Delivery Charge
+							td $
+								span= cart.delivery
+
+						tr
+
+							td(colspan="3") 
+							td 
+								strong Total
+							td 
+								h3 $
+									span= cart.total
+
+			legend Delivery Information 
+			div.bg-danger All fields are required
+			div.row
+				.col-xs-12.col-sm-6.col-md-6.col-lg-6
+					.pull-right 
+						strong Deliver to: 
+				.col-xs-12.col-sm-6.col-md-6.col-lg-6
+					p= info.name
+					p= info.phone
+					p= info.address
+			div.row
+				.col-xs-12.col-sm-6.col-md-6.col-lg-6
+					.pull-right 
+						strong Deliver Time: 
+				.col-xs-12.col-sm-6.col-md-6.col-lg-6
+					p 45 mins
+
+			legend
+			.row
+					.col-xs-12.col-sm-8.col-md-8.col-lg-8
+						button(type="button").btn.btn-primary.pull-right Continue to Payment
+					.col-xs-12.col-sm-2.col-md-2.col-lg-2
+						button(type="button", id="jumpToOrders").btn.btn-primary.pull-right Back to Order Page
+					.col-xs-12.col-sm-2.col-md-2.col-lg-2
+						button(type="button", class="jumpToOrderListing").btn.btn-primary.pull-right Order Listing
+
+
+block scripts
+
+	script(src='js/pizza-checkout.js')
+
+      
+      

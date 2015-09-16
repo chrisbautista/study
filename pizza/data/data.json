@@ -1,0 +1,122 @@
+{
+
+    "size": [
+
+        {
+            "name": "small",
+            "thumb": "size-sm.png",
+            "altText": "small",
+            "caption": "Small 9``",
+            "price": 10
+        }, {
+            "name": "medium",
+            "thumb": "size-med.png",
+            "altText": "medium",
+            "caption": "Medium 12``",
+            "price": 15
+        }, {
+            "name": "large",
+            "thumb": "size-lg.png",
+            "altText": "large",
+            "caption": "Large 14``",
+            "price": 20
+        }
+
+    ],
+
+    "crust": [
+
+        {
+            "name": "panpizza",
+            "thumb": "crust-pan.png",
+            "altText": "Pan Pizza",
+            "caption": "Pan Pizza",
+            "price": 3
+        }, 
+        {
+            "name": "handtossedpizza",
+            "thumb": "crust-handtossed.png",
+            "altText": "Hand-Tossed Pizza",
+            "caption": "Hand-Tossed Pizza",
+            "price": 5
+        }, 
+        {
+            "name": "thinandcrispy",
+            "thumb": "crust-thincrispy.png",
+            "altText": "Thin and Crispy",
+            "caption": "Thin and Crispy",
+            "price": 3.5
+        }
+
+    ],
+
+    "toppings": [
+
+        {
+            "name": "pepperoni",
+            "thumb": "tpng-pepperoni.png",
+            "altText": "Pepperoni",
+            "caption": "Pepperoni",
+            "price": 1.5
+        }, 
+        {
+            "name": "bacon",
+            "thumb": "tpng-bacon.png",
+            "altText": "Bacon",
+            "caption": "Bacon",
+            "price": 1.2
+        }, 
+        {
+            "name": "ham",
+            "thumb": "tpng-ham.png",
+            "altText": "Ham",
+            "caption": "Ham",
+            "price": 1.7
+        }, 
+        {
+            "name": "mushroom",
+            "thumb": "tpng-mushroom.png",
+            "altText": "Mushroom",
+            "caption": "Mushroom",
+            "price": 1.35
+        }, 
+        {
+            "name": "onion",
+            "thumb": "tpng-onion.png",
+            "altText": "Onion",
+            "caption": "Onion",
+            "price": 0.85
+        }, 
+        {
+            "name": "parmessancheese",
+            "thumb": "tpng-parmessan.png",
+            "altText": "Parmessan Cheese",
+            "caption": "Parmessan Cheese",
+            "price": 1.85
+        }, 
+        {
+            "name": "pineapple",
+            "thumb": "tpng-pineapple.png",
+            "altText": "Pineapple",
+            "caption": "Pineapple",
+            "price": 1.94
+        }, 
+        {
+            "name": "mozzarela",
+            "thumb": "tpng-mozzarela.png",
+            "altText": "Mozzarela",
+            "caption": "Mozzarela",
+            "price": 2.00
+        }, 
+        {
+            "name": "greenbellpeppers",
+            "thumb": "tpng-greenpeppers.png",
+            "altText": "Green Bell Peppers",
+            "caption": "Green Bell Peppers",
+            "price": 0.85
+        } 
+
+    ]
+
+
+}

@@ -1,0 +1,20 @@
+#order-form.container
+  form.form-horizontal(action='/checkout', id="orderForm", method='POST', role='form')
+    legend Delivery Information
+    div.bg-danger All fields are required
+    div
+      .form-group
+        label.control-label.col-xs-12.col-sm-3.col-md-3.col-lg-3(for='fname') Name
+        .col-xs-12.col-sm-9.col-md-9.col-lg-9
+          input.form-control.required(type='text', name='fname', id='fname', placeholder='Your name')
+      .form-group
+        label.control-label.col-xs-12.col-sm-3.col-md-3.col-lg-3(for='phone') Phone Number
+        .col-xs-12.col-sm-9.col-md-9.col-lg-9
+          input.form-control.required.phoneUS(type='text', name='phone',id='phone', placeholder='Your number')
+      .form-group
+        label.control-label.col-xs-12.col-sm-3.col-md-3.col-lg-3(for='address') Address
+        .col-xs-12.col-sm-9.col-md-9.col-lg-9
+          input.form-control.required(type='text', name='address', id='address', placeholder='Your address')
+      .col-xs-12.col-sm-offset-10.col-sm-2
+        button#submitBtn.btn.btn-primary.pull-right(type='submit') Submit
+    input(type="hidden", id="cart", name="cart", value="")

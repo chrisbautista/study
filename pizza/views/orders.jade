@@ -1,0 +1,65 @@
+extends layout
+
+mixin formatOrders(orders)
+	tr
+		td= moment(new Date(orders.dateOrdered*1)).format("MM/DD/YYYY hh:mmA")
+		td.delivery-details
+			div= orders.customerName
+			div= orders.customerPhone
+			div.address= orders.customerAddress
+		td
+			div w/out&nbsp;tax:
+				span.money= (orders.notax).toFixed(2)
+			div tax(%):
+				span.money= (orders.tax).toFixed(2)
+			div delivery:
+				span.money= (orders.deliveryCharge).toFixed(2)
+			div
+				strong total:
+					span.money= (orders.total).toFixed(2)
+		td
+			.table-responsive
+				table.container.table-condensed.table.table-striped.orderItems
+					thead
+						tr.success
+							each val, index in ["size & crust","toppings","qty","subtotal"]
+								th= val
+					tbody
+						each oItem, index2 in orders.orderItems
+							tr
+								td
+									span= oItem.size
+									span= oItem.crust
+								td= oItem.toppings
+								td= oItem.qty
+								td= (oItem.subtotal).toFixed(2)
+		td
+			button.deleteBtn.btn.btn-active(value=orders._id, data-hint="Delete order") X
+
+block content
+	.main
+		#orders.container-fluid
+			legend Orders
+				input.input-sm.pull-right(type=text, name="search", id="search", placeholder="filter by name")
+			.table-responsive
+				table.container-fluid.table
+					thead
+						tr.info
+							each val, index in headers
+								th.orders= val
+							th op
+					tbody
+						each val, index in orders
+							+formatOrders(val)
+
+			legend
+			.row
+					.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						button(type="button", id="jumpToOrders").btn.btn-primary.pull-right Back to Order Page
+
+
+block scripts
+
+	script(src='js/pizza-orders.js')
+
+

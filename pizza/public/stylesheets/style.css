@@ -1,0 +1,214 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900|Lora:400,700);
+
+html {font-size: 1em;}
+
+body {
+  background: rgba(238,121,0,0.1);
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+  margin-bottom: 100px;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+  vertical-align: top;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+small, .font_small {font-size: 0.75em;}
+
+legend { font-size: 2.369em; }
+
+/* special states*/
+
+.disabled {
+	opacity: 0.2 !important;
+	cursor: none !important;
+}
+
+.added {
+	background-color: rgba(255,0,0,0.3) !important;
+}
+
+.bg-info, .bg-danger {
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+/* navbar */
+
+.navbar {
+	min-height: 120px;
+	background: url(../images/banner-pizza.jpg);
+	background-size: cover;
+}
+
+.navbar h3 {
+	margin: 0;
+	line-height: 0.9em;
+  font-size: 2.5em;
+  background-color:rgba(0,0,0,0.1);
+  color: rgba(255,255,255,1);
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #FFF;
+}
+
+/* ingredients */
+.builder {
+  margin:50px 0 50px 0;
+}
+
+.builder input {
+  margin:20px auto 20px auto;
+  width:80%;
+  height:2em;
+  font-size:2em;
+}
+
+#menu>.container, #order-form, #checkout, #orders, #about{
+  background-color: #FFF;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.4);
+  padding: 2em;
+}
+
+.pizzafeature {
+	margin: 0 auto 0 2em;
+}
+
+.pizzafeature h2, .ingredient{
+  margin: 4px;
+  padding: 8px;
+}
+
+#menu h2{
+  text-align: right;
+  padding:10px;
+  margin:8px 0 30px 0;
+  background-color: white;
+
+  /*shadow*/
+  -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
+}
+
+.ingredient{
+  opacity: inherit;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.ingredient:hover{
+  opacity: inherit;
+  border-radius: 10px;
+  background-color: rgba(0,255,0,0.1);
+}
+
+.ingredient img { margin: auto;}
+
+.ingredient a {
+	text-align: center;
+}
+
+.ingredient .detail {
+  padding: 5px 0;
+  font-size:1em;
+}
+/* cart */
+
+table th,table td{
+  text-align: right;
+}
+
+table th{
+  text-transform: uppercase;
+}
+
+
+/* order form */
+
+#order-form{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#order-form div:nth-of-type(2) {
+  margin-top:20px;
+}
+
+/* checkout */
+/*  and orders */
+
+#checkout table,#orders table,#checkout table *,#orders table *{
+  font-family: "Source Sans Pro", sans-serif !important;
+}
+
+#checkout .table>tbody>tr>td:last-of-type{
+  font-family: "fixed";
+  text-align: right;
+}
+
+#checkout .table>thead>tr>th, #orders .table>thead>tr>th{
+  text-transform: capitalize;
+}
+
+.orderItems {
+  border:1px solid #f9f9f9;
+  padding: 1px;
+}
+
+.orderItems>thead>tr>th {
+  text-align: center;
+}
+
+.orderItems>tbody>tr>td {
+  text-align: center;
+}
+
+.orderItems>tbody>tr>td:last-child {
+  text-align: right;
+}
+
+.delivery-details div {
+  text-transform: capitalize;
+  text-align: left;
+}
+
+span.money {
+  margin-left: 8px;
+}
+div.address{
+  background-color: rgba(200,0,0,0.1);
+  max-width: 90%;
+  padding:2px 5px 2px 5px;
+  border-radius: 5px;
+}
+
+/* footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
