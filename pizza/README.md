@@ -1,8 +1,8 @@
-# Assignment no. 2
+NodeJS Project: Pizza Shop
 
  Submitted By: Chris Bautista A00950122
  2912 NodeJS Fundamentals @ BCIT
- Instructor: Krishna Kothumbaka
+
 
 * Tested on:
     - Mac OSX
@@ -10,7 +10,7 @@
 
 ## Assumptions/Work Done
 
-#### Assignment #2:
+#### Mar 29:
 * Saving to MongoDB happens upon submission to checkout.
 * added button *Jump to order listing* after checkout
 * Click *Orders* page to see order listing
@@ -21,7 +21,7 @@
   -- orderItems
 * Option to delete from order listing
 
-#### Assignment #1:
+#### Mar 15:
 * I did not like using just plain input types so I refactored the order page and used thumbnails to customize the pizza
 * I read through the assigment requirements but did not find details on whether sessions can be used so I opted not to use them.
 * I modified app.js and "route/route.js" as modules and consumed them in
@@ -65,7 +65,7 @@
 
 ## Directory/Files
 
-### Assignment 2
+### Changes Mar 29
 + models/orders_model.js - schema definition for orders collection
 + added mongodb connection details in app.js
 + modified routes/index.js
@@ -82,7 +82,7 @@
         - /api/orders/:orderid ~ REST:DELETE delete an order by id
             * output JSON
 
-### Assignment 1
+### Changes Mar 15
 * bin/www --- executable wrapper for running project
 * app.js --- definition of application module
 * data/data.json --- contains json of pizza details with prices
